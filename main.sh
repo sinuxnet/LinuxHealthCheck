@@ -1,61 +1,19 @@
 #!/bin/bash
 
-source ./precheck.sh
-source ./functions.sh
+source ./precheck/precheck.sh
+source ./func/functions.sh
 
 # ----- start of script -----
-source ./varibales.sh
+source ./vars/varibales.sh
 
 prnt_msg "Host Info" 
-source hostInfo.sh | formatter
+source ./modules/hostInfo.sh | formatter
 	#sed -r 's/ +/,/g' | sed -r 's/:,/:\t/g' | column -t | sed -r 's/,/ /g'  
 
 prnt_msg "CPU Info"
-source cpuInfo.sh | formatter
+source ./modules/cpuInfo.sh | formatter
 
 
 prnt_msg "Process Info"
-source process.sh 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+source ./modules/process.sh
 
